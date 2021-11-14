@@ -4,7 +4,7 @@ Solving an unmixing problem using parallel computing techniques in Julia
 # Authors: Martina BALBI and Kevin MICHALEWICZ
 
 The model we are using to decompose the image into the sum of the contributions of the endmembers is:
-
+```math
 \begin{equation*}
 \mathbf{X} = \mathbf{S}\mathbf{A} + \mathbf{E} 
 \end{equation*}
@@ -28,5 +28,5 @@ We can try and estimate the abundance matrix using a least squares formulation:
 \end{equation*}
 
 where $\mathbf{1}_{.}$ is a vector of ones whose size is given in index 
-
+```
 The idea is to implement a projected gradient descent algorithm coded by us in a standard serial way and then using parallelization. After that, we perform a similar analysis using Julia libraries. 
